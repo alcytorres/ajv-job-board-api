@@ -66,4 +66,8 @@ group :test do
   gem "selenium-webdriver"
 end
 
+
 gem 'jwt'
+
+gem "rack-cors"
+
