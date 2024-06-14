@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   # root "posts#index"
   get "/users" => "users#index"
 
-  
+  get "/jobs" => "jobs#index"
+
+
 end
