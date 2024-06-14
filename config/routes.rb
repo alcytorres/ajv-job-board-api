@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get "/users" => "users#index"
 
   get "/jobs" => "jobs#index"
+  get "/jobs/:id" => "jobs#show"
 
 
 end
