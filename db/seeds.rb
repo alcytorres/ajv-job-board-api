@@ -23,3 +23,8 @@ job.save
 job = Job.new(company_id: 102, title: "data analyst", description: "teaches ruby programming on rails framework", url: "https://via.placeholder.com/150", location: "seattle", active: "TRUE", salary_range: "40k - 60k")
 job.save
 
+company1 = Company.new(name: "Actualize", logo: "https://anyonecanlearntocode.com/assets/actualize-logo-7cfc296a2f85a02cf29c8ee89707b1da416d72b05fe1d582c9eb9a2888d7dc18.png", description: "top US coding bootcamp")
+company1.save
+
+company2 = Company.new(name: "Google", logo: "https://cdn2.hubspot.net/hubfs/53/image8-2.jpg", description: "master of search")
+company2.save
