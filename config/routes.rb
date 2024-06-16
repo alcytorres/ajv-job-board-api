@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get "/jobs/:id" => "jobs#show"
   post "/jobs/" => "jobs#create"
   patch "/jobs/:id" => "jobs#update"
+  delete "/jobs/:id" => "jobs#destroy"
 
 
   post "/users" => "users#create"
