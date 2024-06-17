@@ -31,3 +31,4 @@ company1.save
 
 company2 = Company.new(name: "Google", logo: "https://cdn2.hubspot.net/hubfs/53/image8-2.jpg", description: "master of search")
 company2.save
+c
