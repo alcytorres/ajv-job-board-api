@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   get "/jobs" => "jobs#index"
   get "/jobs/:id" => "jobs#show"
-  post "/jobs/" => "jobs#create"
+  post "/jobs" => "jobs#create"
   patch "/jobs/:id" => "jobs#update"
   delete "/jobs/:id" => "jobs#destroy"
 
@@ -23,5 +23,5 @@ Rails.application.routes.draw do
   get "/companies/:id" => "companies#show"
   post "/companies" => "companies#create"
   patch "/companies/:id" => "companies#update"
-
+  delete "/companies/:id" => "companies#destroy"
 end
