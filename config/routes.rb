@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   post "/users" => "users#create"
   post "/sessions" => "sessions#create"
 
-
+  get "/companies" => "companies#index"
+  get "/companies/:id" => "companies#show"
 
 end
