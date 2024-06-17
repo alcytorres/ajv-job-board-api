@@ -3,7 +3,7 @@ class JobsController < ApplicationController
   def index
     # p "hello"
     p current_user
-    @jobs = Job.all
+    @jobs = Job.find_by(company_id: 10)
     render :index
   end
 
@@ -37,7 +37,11 @@ class JobsController < ApplicationController
       active: params[:active] || @job.active,
       salary_range: params[:salary_range] || @job.salary_range,
     )
-    render :show
+    if @job.save 
+      render :show
+    else 
+      render json: {message: "not saved"}
+    end
   end
 
   def destroy
