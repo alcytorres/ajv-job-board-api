@@ -11,14 +11,21 @@ class CompaniesController < ApplicationController
 
   def create
     @company = Company.create(
-      company_id: params[:company_id],
-      title: params[:title],
+      name: params[:name],
+      logo: params[:logo],
       description: params[:description],
-      url: params[:url],
-      location: params[:location],
-      active: params[:active],
-      salary_range: params[:salary_range],
     )
     render :show
   end
+
+  def update
+    @company = Company.find_by(id: params[:id])
+    @company.update(
+      name: params[:name] || @company.name,
+      logo: params[:logo] || @company.logo,
+      description: params[:description] || @company.description,
+    )
+    render :show
+  end
+
 end
